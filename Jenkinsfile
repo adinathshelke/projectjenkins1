@@ -5,6 +5,10 @@ pipeline {
 		    customWorkspace "/mnt/adinath"
 		      }
 	         }
+	tools {
+           maven "3.9.3"
+		
+	}
 	       stages {
 		       stage("clean workspace"){
 			 steps {
@@ -18,6 +22,7 @@ pipeline {
 		 }
 		     stage ("build") {
 			 steps {
+				
 			   dir ("/mnt/adinath/webapp") {
 			    
 				sh "mvn clean install"
