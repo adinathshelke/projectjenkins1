@@ -5,12 +5,8 @@ pipeline {
 		      }
 	         }
 	       stages {
-		     stage ("clean workspace") {
-			 steps {
-				cleanWsp()
-			 }
-			 }
-		    stage ("clone ropo") {
+		     
+		    stage ("clone repo") {
 		     steps {
 			  sh "git clone https://github.com/adinathshelke/webapp.git"
 		       }
