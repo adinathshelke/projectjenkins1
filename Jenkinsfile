@@ -37,8 +37,7 @@ pipeline {
 			 }
 			 stage ("deploy on slave") {
 			  steps {
-				  
-				      sh "scp -i /mnt/keshavnv.pem /mnt/adinath/webapp/target/WebApp.war ec2-user@172.31.85.149:/mnt/servers/apache-tomcat-9.0.76/webapps/"
+				  sh "scp -i /mnt/keshavnv.pem /mnt/adinath/webapp/target/WebApp.war ec2-user@172.31.85.149:/mnt/servers/apache-tomcat-9.0.76/webapps/"
 
 			  }
 			 } 
