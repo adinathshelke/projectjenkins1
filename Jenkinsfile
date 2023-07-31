@@ -35,5 +35,13 @@ pipeline {
 			  sh "cp -r /mnt/adinath/webapp/target/WebApp.war /mnt/servers/apache-tomcat-9.0.76/webapps/" 
 			 }
 			 }
+			 stage ("deploy on slave") {
+			  steps {
+			  sh "cp -r /mnt/adinath/webapp/target/WebApp.war /mnt/servers/apache-tomcat-9.0.76/webapps/"
+			  }
+			 } 
+			 
+			 
+			 
 	   }
 }
