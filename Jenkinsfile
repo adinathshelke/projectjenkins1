@@ -36,16 +36,10 @@ pipeline {
 			 }
 			 }
 			 stage ("deploy on slave") {
-				 agent {
-	                      label { 
-		               label "slave1"
-		                /*customWorkspace "/mnt/adinath" */
-		                   }
-	                             }
 			  steps {
-			  sh "scp -i /mnt/adinath/webapp/target/WebApp.war /mnt/servers/apache-tomcat-9.0.76/webapps/"
-			       }
-			            } 
+			  sh "scp -r /mnt/adinath/webapp/target/WebApp.war ec2-user@172.31.85.149:/mnt/servers/apache-tomcat-9.0.76/webapps/"
+			  }
+			 } 
 			 
 			 
 			 
