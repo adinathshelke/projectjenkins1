@@ -37,8 +37,8 @@ pipeline {
 			 }
 			 stage ("deploy on slave") {
 			  steps {
-			    sh " sudo chmod -R 777 /root/.ssh/id_rsa"
-                            sh " sudo scp -i /root/.ssh/id_rsa -r /mnt/adinath/webapp/target/WebApp.war ec2-user@172.31.85.149:/mnt/servers/apache-tomcat-9.0.76/webapps/"
+		
+                            sh " sudo scp -i '/mnt/keshavnv.pem' /mnt/adinath/webapp/target/WebApp.war ec2-user@172.31.85.149:/mnt/servers/apache-tomcat-9.0.76/webapps/"
 			  }
 			 } 
 			 
