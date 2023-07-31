@@ -2,7 +2,7 @@ pipeline {
        agent {
 	     label { 
 		  label "master"
-		    customWorkspace "/mnt/"
+		    customWorkspace "/mnt/adinath"
 		      }
 	         }
 	       stages {
@@ -18,7 +18,7 @@ pipeline {
 		 }
 		     stage ("build") {
 			 steps {
-			   dir ("/mnt/webapp") {
+			   dir ("/mnt/adinath/webapp") {
 			    
 				sh "mvn clean install"
 			 }
