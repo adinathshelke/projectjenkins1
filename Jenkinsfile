@@ -37,15 +37,15 @@ pipeline {
 			 }
 			 stage ("deploy on slave") {
 				 agent {
-	     label { 
-		  label "slave1"
-		    customWorkspace "/mnt/adinath"
-		      }
-	         }
+	                      label { 
+		               label "slave1"
+		                /*customWorkspace "/mnt/adinath" */
+		                   }
+	                             }
 			  steps {
 			  sh "cp -r /mnt/adinath/webapp/target/WebApp.war /mnt/servers/apache-tomcat-9.0.76/webapps/"
-			  }
-			 } 
+			       }
+			            } 
 			 
 			 
 			 
